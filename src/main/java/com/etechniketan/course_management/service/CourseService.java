@@ -9,6 +9,8 @@ public interface CourseService {
 
     List<Course> getAllCourses();
 
+    Course getAllCoursesByTitle(String courseTitle);
+
     Course getCourseById(Long id);
 
     List<Course> getPopularCourses(int minStudents);

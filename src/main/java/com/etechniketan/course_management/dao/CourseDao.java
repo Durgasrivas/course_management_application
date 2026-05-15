@@ -15,13 +15,9 @@ public interface CourseDao extends JpaRepository<Course, Long> {//<Entity, And i
 
     Course findByCourseTitle(String courseTitle);
 
-
-
-
-    @Query("SELECT c FROM Course c WHERE size(c.students) >= :minStudents")//HQL/JPQL
+    @Query("SELECT c FROM Course c WHERE size(c.students) >= :minStudents")
+    //HQL/JPQL
     List<Course> findPopularCourses(@Param("minStudents") int minStudents);
-
-
 
 
 }

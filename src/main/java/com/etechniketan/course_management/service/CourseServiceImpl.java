@@ -24,6 +24,11 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public Course getAllCoursesByTitle(String courseTitle) {
+        return courseDao.findByCourseTitle(courseTitle);
+    }
+
+    @Override
     public Course getCourseById(Long id) {
 //        return courseDao.findById(id).orElse(null);
         return courseDao.findById(id).orElseThrow(() -> new RuntimeException("Course not found"));

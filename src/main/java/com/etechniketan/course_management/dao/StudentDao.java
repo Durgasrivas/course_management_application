@@ -9,8 +9,6 @@ import java.util.List;
 @Repository
 public interface StudentDao extends JpaRepository<Student, Long> {
 
-
-
     List<Student> findByCourses_CourseTitle(String courseTitle);
 
     List<Student> findStudentByCity(String city);

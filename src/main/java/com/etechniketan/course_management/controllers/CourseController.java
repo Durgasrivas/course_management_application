@@ -35,6 +35,12 @@ public class CourseController {
     }
 
 
+    @GetMapping("/{title}")
+    public Course getCourseByTitle(@PathVariable String title) {
+        return courseService.getAllCoursesByTitle(title);
+    }
+
+
     @GetMapping("/{id}")
     public ResponseEntity<Course> getCourseById(@PathVariable Long id) {
 
