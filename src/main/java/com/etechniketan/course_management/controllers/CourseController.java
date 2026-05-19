@@ -54,7 +54,8 @@ public class CourseController {
 
 
     @GetMapping("/popular")
-    public List<Course> getPopularCourses(@RequestParam(defaultValue = "1") int minStudents) {//Query Param
+    public List<Course> getPopularCourses(
+            @RequestParam(defaultValue = "1") int minStudents) {//Query Param
         return courseService.getPopularCourses(minStudents);
     }
 
